@@ -1,0 +1,19 @@
+{
+  "Return": [
+    {
+      "itemId": 1,
+      "itemName": "samsung tv",
+      "itemDescription": "product turned out to be defective"
+    },
+    {
+      "itemId": 2,
+      "itemName": "sony speaker",
+      "itemDescription": "product is damaged"
+    },
+    {
+      "itemId": 3,
+      "itemName": "lenovo laptop",
+      "itemDescription": "product's screen is broken"
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "Godown": [
+    {
+      "itemId": 1,
+
+      "itemName": "TV",
+
+      "itemDescription": "it is a samsung tv"
+    },
+
+    {
+      "itemId": 2,
+
+      "itemName": "Speakers",
+
+      "itemDescription": "this is an amazing Bose speaker"
+    },
+
+    {
+      "itemId": 3,
+
+      "itemName": "Bluetooth earphones",
+
+      "itemDescription": "these are amazing earphones"
+    }
+  ]
+}
