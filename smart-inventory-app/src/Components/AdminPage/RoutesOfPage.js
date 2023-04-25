@@ -3,10 +3,8 @@ import Godown from "../GodownPage/Godown";
 import Employee from "../EmployeePage/Employee";
 import Inwards from "../Inwards/Inwards";
 import Return from "../ReturnPage/Return";
-
 import { Routes, Route } from "react-router-dom";
 import Login from "../LoginPage/Login";
-
 const RoutesOfPage = () => {
   return (
     <div>
@@ -15,6 +13,8 @@ const RoutesOfPage = () => {
         <Route path="/employee" element={<Employee />} />
         <Route path="/inwards" element={<Inwards />} />
         <Route path="/return" element={<Return />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/login" element={<Login />} />
       </Routes>
     </div>
   );

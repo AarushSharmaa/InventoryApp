@@ -12,8 +12,8 @@ const Godown = () => {
   useEffect(() => {
     fetch("http://localhost:3030/Godown")
       .then((response) => response.json())
-
       .then((result) => {
+        console.log(result);
         setItems(
           result.map((exp) => {
             return { ...exp };

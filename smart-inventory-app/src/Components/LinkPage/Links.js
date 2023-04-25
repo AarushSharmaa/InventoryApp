@@ -27,6 +27,12 @@ const Links = () => {
             return
           </NavLink>
         </div>
+
+        <div>
+          <NavLink to="./login" className="navbar-brand">
+            logout
+          </NavLink>
+        </div>
       </div>
     </>
   );
