@@ -9,7 +9,7 @@ export default function Login() {
   const [password, setPassword] = useState();
 
   const submitHandler = (e) => {
-    fetch("http://localhost:3032/AuthorisedPersonnel")
+    fetch("http://localhost:3030/AuthorisedPersonnel")
       .then((response) => response.json())
       .then((result) => {
         for (let index = 0; index < result.length; index++) {
@@ -27,50 +27,56 @@ export default function Login() {
 
   return (
     <>
-      <h5 className="fw-normal mb-3 pb-3" style={{ "letter-spacing": "1px" }}>
-        Sign into your account
-      </h5>
+      <div className="container">
+        <div className="row justify-content-center">
+          <div className="col-md-6">
+            <div className="card mt-5">
+              <div className="card-body">
+                <h5
+                  className="fw-normal mb-3 pb-3"
+                  style={{ "letter-spacing": "1px" }}
+                >
+                  Sign into your account
+                </h5>
 
-      <form>
-        <div class="container py-5 h-100" style={{ backgroundColor: "#eee" }}>
-          {/* take username from the user */}
+                <form>
+                  <div class="form-outline mb-4">
+                    <label htmlFor="username" className="form-label">
+                      Username
+                    </label>
+                    <input
+                      id="username"
+                      type="text"
+                      className="form-control"
+                      onChange={(e) => setUserName(e.target.value)}
+                    />
+                  </div>
 
-          <div class="form-outline mb-4">
-            <label htmlFor="username">
-              Username
-              <input
-                id="username"
-                type="text"
-                className="form-control form-control-lg"
-                onChange={(e) => setUserName(e.target.value)}
-              />
-            </label>
+                  <div className="form-outline mb-4">
+                    <label htmlFor="password" className="form-label">
+                      Password
+                    </label>
+                    <input
+                      id="password"
+                      type="password"
+                      className="form-control"
+                      onChange={(e) => setPassword(e.target.value)}
+                    />
+                  </div>
+
+                  <button
+                    type="submit"
+                    className="btn btn-dark btn-lg btn-block"
+                    onClick={submitHandler}
+                  >
+                    Sign In
+                  </button>
+                </form>
+              </div>
+            </div>
           </div>
-
-          {/* take password from the user */}
-
-          <div className="form-outline mb-4">
-            <label htmlFor="password">
-              Password
-              <input
-                id="password"
-                type="password"
-                className="form-control form-control-lg"
-                onChange={(e) => setPassword(e.target.value)}
-              />
-            </label>
-          </div>
-
-          {/* submit button */}
-          <button
-            type="sign-in"
-            className="btn btn-dark btn-lg btn-block"
-            onClick={submitHandler}
-          >
-            Sign-in
-          </button>
         </div>
-      </form>
+      </div>
     </>
   );
 }

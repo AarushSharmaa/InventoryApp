@@ -1,0 +1,29 @@
+{
+  "Deliveries": [
+    {
+      "id": 1,
+      "name": "Socks",
+      "quantity": 1
+    },
+    {
+      "id": 2,
+      "name": "Pencil",
+      "quantity": 12
+    },
+    {
+      "id": 3,
+      "name": "Water bottle",
+      "quantity": 2
+    },
+    {
+      "id": 4,
+      "name": "Table",
+      "quantity": 4
+    },
+    {
+      "id": 5,
+      "name": "Laptop",
+      "quantity": 1
+    }
+  ]
+}

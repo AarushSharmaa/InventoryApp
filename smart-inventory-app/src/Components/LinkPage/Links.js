@@ -1,38 +1,43 @@
 import { NavLink } from "react-router-dom";
+import "bootstrap/dist/css/bootstrap.css";
+import "./Links.css";
 
 const Links = () => {
   return (
     <>
-      <div className="navbar navbar-expand-lg navbar-light bg-light">
-        <div>
-          <NavLink to="./godown" className="navbar-brand">
-            godown
-          </NavLink>
-        </div>
+      <div className="card">
+        <nav className="navbar navbar-expand-lg navbar-light bg-light">
+          <div className="container-fluid">
+            <NavLink to="/home" className="navbar-brand">
+              Home
+            </NavLink>
+            <NavLink to="/godown" className="navbar-brand">
+              Godown
+            </NavLink>
+            <NavLink to="/employee" className="navbar-brand">
+              Employee
+            </NavLink>
+            <NavLink to="/inwards" className="navbar-brand">
+              Inwards
+            </NavLink>
 
-        <div>
-          <NavLink to="./employee" className="navbar-brand">
-            employee
-          </NavLink>
-        </div>
+            <NavLink to="/delivery" className="navbar-brand">
+              Delivery
+            </NavLink>
+            <NavLink to="/return" className="navbar-brand">
+              Return
+            </NavLink>
+            <NavLink to="/report" className="navbar-brand">
+              Report
+            </NavLink>
 
-        <div>
-          <NavLink to="./inwards" className="navbar-brand">
-            inwards
-          </NavLink>
-        </div>
-
-        <div>
-          <NavLink to="./return" className="navbar-brand">
-            return
-          </NavLink>
-        </div>
-
-        <div>
-          <NavLink to="./login" className="navbar-brand">
-            logout
-          </NavLink>
-        </div>
+            <div className="ms-auto">
+              <NavLink to="/login" className="btn btn-dark">
+                Logout
+              </NavLink>
+            </div>
+          </div>
+        </nav>
       </div>
     </>
   );

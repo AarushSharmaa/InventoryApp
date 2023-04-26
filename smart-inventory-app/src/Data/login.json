@@ -17,10 +17,9 @@
       "id": 4
     },
     {
+      "employeeId": "43",
+      "username": "test-user",
       "id": 5
-    },
-    {
-      "id": 6
     }
   ]
 }

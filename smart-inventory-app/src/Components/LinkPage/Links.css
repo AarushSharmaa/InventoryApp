@@ -1,0 +1,11 @@
+.navbar-brand {
+  font-size: 1.2rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  padding: 0.5rem 1rem;
+  transition: all 0.2s ease-in-out;
+}
+
+.navbar-brand:hover {
+  background-color: #e2e2e2;
+}

@@ -12,14 +12,14 @@ function App() {
       {/* <h4>Smart Inventory Management App</h4> */}
 
       {/* <Login /> */}
-      {/* <Admin /> */}
+      <Admin />
       {/* <Godown /> */}
       {/* <Return /> */}
       {/* <Deliveries /> */}
       {/* <Inwards /> */}
       {/* Inwards & Employees done by someone else */}
 
-      <Testing />
+      {/* <Testing /> */}
     </div>
   );
 }

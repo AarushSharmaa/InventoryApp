@@ -5,6 +5,9 @@ import Inwards from "../Inwards/Inwards";
 import Return from "../ReturnPage/Return";
 import { Routes, Route } from "react-router-dom";
 import Login from "../LoginPage/Login";
+import Reports from "../ReportPage/Reports";
+import Admin from "./Admin";
+import Deliveries from "../DeliveriesPage/Deliveries";
 const RoutesOfPage = () => {
   return (
     <div>
@@ -15,6 +18,9 @@ const RoutesOfPage = () => {
         <Route path="/return" element={<Return />} />
         <Route path="/login" element={<Login />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/report" element={<Reports />} />
+        <Route path="/delivery" element={<Deliveries />} />
+        <Route path="/home" />
       </Routes>
     </div>
   );

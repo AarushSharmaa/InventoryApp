@@ -1,5 +1,3 @@
-// this will display the entire stock available in a godown
-
 import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.css";
 
@@ -10,7 +8,7 @@ const Godown = () => {
 
   // we will fetch data & update the items using setItems
   useEffect(() => {
-    fetch("http://localhost:3030/Godown")
+    fetch("http://localhost:3032/Godown")
       .then((response) => response.json())
       .then((result) => {
         console.log(result);
