@@ -2,6 +2,14 @@ import React, { useState } from "react";
 
 const AddEmployee = () => {
   const [showForm, setShowForm] = useState(false);
+  // use this ->
+
+  // const obj = {
+  //   employeeId : "",
+
+  // }
+  // useState(obj)
+
   const [employeeId, setEmployeeId] = useState("");
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
@@ -51,7 +59,7 @@ const AddEmployee = () => {
         Add Employee
       </button>
       {showForm && (
-        <form className="mt-3 p-3 border rounded shadow-sm">
+        <form className="mt-3 p-3 border rounded shadow-sm add-employee-form">
           {/* First name */}
 
           <div className="mb-3">

@@ -1,12 +1,13 @@
 import { NavLink, useNavigate } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.css";
 import "./Links.css";
+import RoutesOfPage from "../AdminPage/RoutesOfPage";
 
 const Links = () => {
   const navigate = useNavigate();
   const handleLogout = () => {
     console.log("logout button clicked");
-
+    localStorage.removeItem("user");
     navigate("/login");
   };
   return (
@@ -37,6 +38,7 @@ const Links = () => {
               Report
             </NavLink>
 
+            {/* logout button */}
             <div className="ms-auto">
               <button onClick={handleLogout} className="btn btn-dark">
                 Logout

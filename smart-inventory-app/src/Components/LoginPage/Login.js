@@ -4,9 +4,6 @@ import Admin from "../AdminPage/Admin";
 import { useNavigate } from "react-router-dom";
 import RoutesOfPage from "../AdminPage/RoutesOfPage";
 
-// use push for Routes to move from sign in to admin page
-// useNavigate - read about it
-
 export default function Login() {
   const [username, setUserName] = useState();
   const [password, setPassword] = useState();
@@ -18,6 +15,8 @@ export default function Login() {
     fetch("http://localhost:3030/AuthorisedPersonnel")
       .then((response) => response.json())
       .then((result) => {
+        localStorage.setItem("user", JSON.stringify({ username, password }));
+
         for (let index = 0; index < result.length; index++) {
           if (
             result[index].name === username &&
@@ -25,7 +24,6 @@ export default function Login() {
           ) {
             console.log(`${username} : you are authorised`);
             navigate("/admin");
-            return;
           }
         }
       });
