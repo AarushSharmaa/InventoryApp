@@ -38,7 +38,7 @@ const Godown = () => {
             items.map((item) => (
               <tbody>
                 <tr key={item.itemId}>
-                  <th scope="row">{item.itemId}</th>
+                  <td scope="row">{item.itemId}</td>
                   <td>{item.itemName}</td>
                   <td>{item.itemDescription}</td>
                 </tr>

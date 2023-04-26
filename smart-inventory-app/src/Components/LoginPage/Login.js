@@ -1,5 +1,8 @@
 import React, { useEffect, useState } from "react";
 import "bootstrap/dist/css/bootstrap.css";
+import Admin from "../AdminPage/Admin";
+import { useNavigate } from "react-router-dom";
+import RoutesOfPage from "../AdminPage/RoutesOfPage";
 
 // use push for Routes to move from sign in to admin page
 // useNavigate - read about it
@@ -7,8 +10,11 @@ import "bootstrap/dist/css/bootstrap.css";
 export default function Login() {
   const [username, setUserName] = useState();
   const [password, setPassword] = useState();
+  const navigate = useNavigate();
 
   const submitHandler = (e) => {
+    e.preventDefault();
+
     fetch("http://localhost:3030/AuthorisedPersonnel")
       .then((response) => response.json())
       .then((result) => {
@@ -17,12 +23,12 @@ export default function Login() {
             result[index].name === username &&
             result[index].id === Number(password)
           ) {
-            console.log("you are authorised");
+            console.log(`${username} : you are authorised`);
+            navigate("/admin");
+            return;
           }
         }
       });
-
-    e.preventDefault();
   };
 
   return (

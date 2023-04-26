@@ -35,6 +35,14 @@ const AddEmployee = () => {
       console.error(error);
     }
     setShowForm(false);
+    setEmployeeId("");
+    setFirstName("");
+    setLastName("");
+    setPhoneNo("");
+    setAddress("");
+    setEmailId("");
+    setUsername("");
+    setPassword("");
   };
 
   return (

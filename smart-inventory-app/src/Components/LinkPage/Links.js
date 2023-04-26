@@ -1,8 +1,14 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.css";
 import "./Links.css";
 
 const Links = () => {
+  const navigate = useNavigate();
+  const handleLogout = () => {
+    console.log("logout button clicked");
+
+    navigate("/login");
+  };
   return (
     <>
       <div className="card">
@@ -32,9 +38,9 @@ const Links = () => {
             </NavLink>
 
             <div className="ms-auto">
-              <NavLink to="/login" className="btn btn-dark">
+              <button onClick={handleLogout} className="btn btn-dark">
                 Logout
-              </NavLink>
+              </button>
             </div>
           </div>
         </nav>
