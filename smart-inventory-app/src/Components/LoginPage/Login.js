@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import "bootstrap/dist/css/bootstrap.css";
-import Admin from "../AdminPage/Admin";
 import { useNavigate } from "react-router-dom";
 import RoutesOfPage from "../AdminPage/RoutesOfPage";
+import "./Login.css";
 
 export default function Login() {
   const [username, setUserName] = useState();
@@ -31,6 +31,9 @@ export default function Login() {
 
   return (
     <>
+      <div className="container-fluid bg-dark text-light py-3">
+        <h3 className="text-center mb-0">Smart Inventory Management App</h3>
+      </div>
       <div className="container">
         <div className="row justify-content-center">
           <div className="col-md-6">
@@ -44,7 +47,7 @@ export default function Login() {
                 </h5>
 
                 <form>
-                  <div class="form-outline mb-4">
+                  <div className="form-outline mb-4">
                     <label htmlFor="username" className="form-label">
                       Username
                     </label>

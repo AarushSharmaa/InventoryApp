@@ -12,11 +12,11 @@ import { useEffect } from "react";
 const Admin = () => {
   return (
     <>
-      <div className="container">
+      <div className="container-fluid">
         <div className="row justify-content-center mt-5">
           <div className="col-md-10">
             <div className="card">
-              <div className="card-body">
+              <div className="card-body bg-lightblue">
                 <h4 className="fw-normal mb-3 pb-3 text-center">Admin Page</h4>
                 <Links />
                 <RoutesOfPage />

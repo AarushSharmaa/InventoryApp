@@ -1,17 +1,14 @@
 import React, { useState } from "react";
-import "bootstrap/dist/css/bootstrap.css";
-
+import "bootstrap/dist/css/bootstrap.min.css";
 import { useEffect } from "react";
 
 const Godown = () => {
   const [items, setItems] = useState([]);
 
-  // we will fetch data & update the items using setItems
   useEffect(() => {
     fetch("http://localhost:3032/Godown")
       .then((response) => response.json())
       .then((result) => {
-        console.log(result);
         setItems(
           result.map((exp) => {
             return { ...exp };
@@ -22,31 +19,31 @@ const Godown = () => {
   }, []);
 
   return (
-    <>
-      <h1>Godown details</h1>
-      <div>
-        <table className="table">
-          <thead>
+    <div className="container mt-5">
+      <h1 className="text-center mb-5">Godown Details</h1>
+      <div className="table-responsive">
+        <table className="table table-hover table-bordered">
+          <thead className="table-dark">
             <tr>
-              <th scope="col">Item Id</th>
+              <th scope="col">#</th>
               <th scope="col">Item Name</th>
-              <th scope="col">Item Description</th>
+              <th scope="col">Description</th>
             </tr>
           </thead>
 
-          {items &&
-            items.map((item) => (
-              <tbody>
+          <tbody>
+            {items &&
+              items.map((item, index) => (
                 <tr key={item.itemId}>
-                  <td scope="row">{item.itemId}</td>
+                  <td scope="row">{index + 1}</td>
                   <td>{item.itemName}</td>
                   <td>{item.itemDescription}</td>
                 </tr>
-              </tbody>
-            ))}
+              ))}
+          </tbody>
         </table>
       </div>
-    </>
+    </div>
   );
 };
 

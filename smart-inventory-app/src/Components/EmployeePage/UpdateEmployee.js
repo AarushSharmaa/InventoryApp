@@ -1,15 +1,7 @@
 import React, { useState } from "react";
 
-const AddEmployee = () => {
+const UpdateEmployee = () => {
   const [showForm, setShowForm] = useState(false);
-  // use this ->
-
-  // const obj = {
-  //   employeeId : "",
-
-  // }
-  // useState(obj)
-
   const [employeeId, setEmployeeId] = useState("");
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
@@ -19,16 +11,16 @@ const AddEmployee = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
-  // sends a POST request to the database
-  const handleAddEmployee = async () => {
+  // sends a PUT request to the database
+  const handleUpdateEmployee = async () => {
     try {
-      // console.log(firstName, lastName, con, email);
-      const response = await fetch("http://10.25.240.61:6543/addEmployee", {
-        method: "POST",
+      const response = await fetch("http://dummy-api.com/updateEmployee", {
+        method: "PUT",
         headers: {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
+          employeeId,
           firstName,
           lastName,
           phoneNo,
@@ -38,6 +30,7 @@ const AddEmployee = () => {
           password,
         }),
       });
+
       const data = await response.json();
       console.log(data);
     } catch (error) {
@@ -57,12 +50,25 @@ const AddEmployee = () => {
   return (
     <div>
       <button className="btn btn-secondary" onClick={() => setShowForm(true)}>
-        Add Employee
+        Update Employee
       </button>
       {showForm && (
-        <form className="mt-3 p-3 border rounded shadow-sm add-employee-form">
-          {/* First name */}
+        <form className="mt-3 p-3 border rounded shadow-sm update-employee-form">
+          {/* Employee ID */}
+          <div className="mb-3">
+            <label htmlFor="employeeId" className="form-label">
+              Employee ID:
+            </label>
+            <input
+              type="text"
+              className="form-control"
+              id="employeeId"
+              value={employeeId}
+              onChange={(event) => setEmployeeId(event.target.value)}
+            />
+          </div>
 
+          {/* First name */}
           <div className="mb-3">
             <label htmlFor="firstName" className="form-label">
               First Name:
@@ -161,7 +167,7 @@ const AddEmployee = () => {
             />
           </div>
 
-          {/* functionality */}
+          {/* functionality - cancel & update employee */}
           <div className="d-flex justify-content-end">
             <button
               type="button"
@@ -173,7 +179,7 @@ const AddEmployee = () => {
             <button
               type="button"
               className="btn btn-primary"
-              onClick={handleAddEmployee}
+              onClick={handleUpdateEmployee}
             >
               Add Employee
             </button>
@@ -184,4 +190,4 @@ const AddEmployee = () => {
   );
 };
 
-export default AddEmployee;
+export default UpdateEmployee;

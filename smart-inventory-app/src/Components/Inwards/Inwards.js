@@ -25,7 +25,7 @@ const Inwards = () => {
 
   return (
     <>
-      <h1>Godown details</h1>
+      <h1> Inward details</h1>
       <div>
         <table className="table">
           <thead>

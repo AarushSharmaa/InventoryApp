@@ -4,7 +4,7 @@ import "bootstrap/dist/css/bootstrap.css";
 const Reports = () => {
   return (
     <div className="container mt-4">
-      <h2>Godown Stats</h2>
+      <h2>Report</h2>
       <hr />
 
       <div className="row">
