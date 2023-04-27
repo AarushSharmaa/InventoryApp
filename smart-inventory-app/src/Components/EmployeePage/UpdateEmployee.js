@@ -65,6 +65,7 @@ const UpdateEmployee = () => {
               id="employeeId"
               value={employeeId}
               onChange={(event) => setEmployeeId(event.target.value)}
+              required
             />
           </div>
 
@@ -79,6 +80,7 @@ const UpdateEmployee = () => {
               id="firstName"
               value={firstName}
               onChange={(event) => setFirstName(event.target.value)}
+              required
             />
           </div>
 
@@ -93,6 +95,7 @@ const UpdateEmployee = () => {
               id="lastName"
               value={lastName}
               onChange={(event) => setLastName(event.target.value)}
+              required
             />
           </div>
 
@@ -107,6 +110,7 @@ const UpdateEmployee = () => {
               id="phoneNo"
               value={phoneNo}
               onChange={(event) => setPhoneNo(event.target.value)}
+              required
             />
           </div>
 
@@ -121,6 +125,7 @@ const UpdateEmployee = () => {
               id="address"
               value={address}
               onChange={(event) => setAddress(event.target.value)}
+              required
             />
           </div>
 
@@ -135,6 +140,7 @@ const UpdateEmployee = () => {
               id="emailId"
               value={emailId}
               onChange={(event) => setEmailId(event.target.value)}
+              required
             />
           </div>
 
@@ -149,6 +155,7 @@ const UpdateEmployee = () => {
               id="username"
               value={username}
               onChange={(event) => setUsername(event.target.value)}
+              required
             />
           </div>
 
@@ -164,6 +171,7 @@ const UpdateEmployee = () => {
               id="password"
               value={password}
               onChange={(event) => setPassword(event.target.value)}
+              required
             />
           </div>
 

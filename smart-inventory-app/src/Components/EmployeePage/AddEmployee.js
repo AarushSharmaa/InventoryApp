@@ -73,6 +73,7 @@ const AddEmployee = () => {
               id="firstName"
               value={firstName}
               onChange={(event) => setFirstName(event.target.value)}
+              required
             />
           </div>
 
@@ -87,6 +88,7 @@ const AddEmployee = () => {
               id="lastName"
               value={lastName}
               onChange={(event) => setLastName(event.target.value)}
+              required
             />
           </div>
 
@@ -101,6 +103,7 @@ const AddEmployee = () => {
               id="phoneNo"
               value={phoneNo}
               onChange={(event) => setPhoneNo(event.target.value)}
+              required
             />
           </div>
 
@@ -115,6 +118,7 @@ const AddEmployee = () => {
               id="address"
               value={address}
               onChange={(event) => setAddress(event.target.value)}
+              required
             />
           </div>
 
@@ -129,6 +133,7 @@ const AddEmployee = () => {
               id="emailId"
               value={emailId}
               onChange={(event) => setEmailId(event.target.value)}
+              required
             />
           </div>
 
@@ -143,6 +148,7 @@ const AddEmployee = () => {
               id="username"
               value={username}
               onChange={(event) => setUsername(event.target.value)}
+              required
             />
           </div>
 
@@ -158,6 +164,7 @@ const AddEmployee = () => {
               id="password"
               value={password}
               onChange={(event) => setPassword(event.target.value)}
+              required
             />
           </div>
 
