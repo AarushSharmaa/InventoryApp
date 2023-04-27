@@ -1,54 +1,43 @@
-// this will display all the items put in for return by the customer
-
-// this will display the entire stock available in a godown
-
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "bootstrap/dist/css/bootstrap.css";
-
-import { useEffect } from "react";
 
 const Return = () => {
   const [items, setItems] = useState([]);
 
-  // we will fetch data & update the items using setItems
   useEffect(() => {
     fetch("http://localhost:3010/Return")
       .then((response) => response.json())
-
       .then((result) => {
-        setItems(
-          result.map((exp) => {
-            return { ...exp };
-          })
-        );
+        setItems(result.map((exp) => ({ ...exp })));
       })
       .catch(console.error);
   }, []);
 
   return (
     <>
-      <h1>Return details</h1>
-      <div>
-        <table className="table">
-          <thead>
-            <tr>
-              <th scope="col">Item Id</th>
-              <th scope="col">Item Name</th>
-              <th scope="col">Item's Reason of Return</th>
-            </tr>
-          </thead>
-
-          {items &&
-            items.map((item) => (
-              <tbody>
-                <tr key={item.itemId}>
-                  <th scope="row">{item.itemId}</th>
-                  <td>{item.itemName}</td>
-                  <td>{item.itemDescription}</td>
-                </tr>
-              </tbody>
-            ))}
-        </table>
+      <div className="container mt-5">
+        <h1 className="text-center mb-5">Return Details</h1>
+        <div className="table-responsive">
+          <table className="table table-hover table-bordered">
+            <thead className="table-dark">
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Item Name</th>
+                <th scope="col">Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              {items &&
+                items.map((item) => (
+                  <tr key={item.itemId}>
+                    <td>{item.itemId}</td>
+                    <td>{item.itemName}</td>
+                    <td>{item.itemDescription}</td>
+                  </tr>
+                ))}
+            </tbody>
+          </table>
+        </div>
       </div>
     </>
   );
