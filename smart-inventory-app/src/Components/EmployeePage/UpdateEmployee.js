@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 const UpdateEmployee = () => {
   const [showForm, setShowForm] = useState(false);
-  const [employeeId, setEmployeeId] = useState("");
+  const [empId, setEmpId] = useState("");
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [phoneNo, setPhoneNo] = useState("");
@@ -14,13 +14,13 @@ const UpdateEmployee = () => {
   // sends a PUT request to the database
   const handleUpdateEmployee = async () => {
     try {
-      const response = await fetch("http://dummy-api.com/updateEmployee", {
+      const response = await fetch("http://10.25.240.61:6543/update", {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          employeeId,
+          empId,
           firstName,
           lastName,
           phoneNo,
@@ -37,7 +37,7 @@ const UpdateEmployee = () => {
       console.error(error);
     }
     setShowForm(false);
-    setEmployeeId("");
+    setEmpId("");
     setFirstName("");
     setLastName("");
     setPhoneNo("");
@@ -56,15 +56,15 @@ const UpdateEmployee = () => {
         <form className="mt-3 p-3 border rounded shadow-sm update-employee-form">
           {/* Employee ID */}
           <div className="mb-3">
-            <label htmlFor="employeeId" className="form-label">
+            <label htmlFor="empId" className="form-label">
               Employee ID:
             </label>
             <input
               type="text"
               className="form-control"
               id="employeeId"
-              value={employeeId}
-              onChange={(event) => setEmployeeId(event.target.value)}
+              value={empId}
+              onChange={(event) => setEmpId(event.target.value)}
               required
             />
           </div>
