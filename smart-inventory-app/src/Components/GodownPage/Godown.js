@@ -6,7 +6,7 @@ const Godown = () => {
   const [items, setItems] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:3032/Godown")
+    fetch("http://10.25.240.112:5432/products")
       .then((response) => response.json())
       .then((result) => {
         setItems(
@@ -25,7 +25,6 @@ const Godown = () => {
         <table className="table table-hover table-bordered">
           <thead className="table-dark">
             <tr>
-              <th scope="col">#</th>
               <th scope="col">Item Name</th>
               <th scope="col">Description</th>
             </tr>
@@ -33,11 +32,11 @@ const Godown = () => {
 
           <tbody>
             {items &&
-              items.map((item, index) => (
-                <tr key={item.itemId}>
-                  <td scope="row">{index + 1}</td>
-                  <td>{item.itemName}</td>
-                  <td>{item.itemDescription}</td>
+              items.map(({ product_id, productName, productDiscription }) => (
+                <tr key={product_id}>
+                  {/* {console.log(productName)} */}
+                  <td>{productName}</td>
+                  <td>{productDiscription}</td>
                 </tr>
               ))}
           </tbody>

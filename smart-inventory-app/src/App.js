@@ -5,11 +5,11 @@ import Godown from "./Components/GodownPage/Godown";
 import Return from "./Components/ReturnPage/Return";
 import Inwards from "./Components/Inwards/Inwards";
 import Deliveries from "./Components/DeliveriesPage/Deliveries";
-import Testing from "./Components/Testing/Testing";
 import Links from "./Components/LinkPage/Links";
 import RoutesOfPage from "./Components/AdminPage/RoutesOfPage";
 import { useEffect, useState } from "react";
 import { Routes, Route } from "react-router-dom";
+
 function App() {
   const [userName, setUserName] = useState("");
 

@@ -32,7 +32,7 @@ const UpdateEmployee = () => {
       });
 
       const data = await response.json();
-      console.log(data);
+      // console.log(data);
     } catch (error) {
       console.error(error);
     }
@@ -184,12 +184,13 @@ const UpdateEmployee = () => {
             >
               Cancel
             </button>
+
             <button
               type="button"
               className="btn btn-primary"
               onClick={handleUpdateEmployee}
             >
-              Add Employee
+              Update Employee
             </button>
           </div>
         </form>
