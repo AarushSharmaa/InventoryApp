@@ -18,8 +18,8 @@ const RoutesOfPage = () => {
         <Route path="/return" element={<Return />} />
         <Route path="/report" element={<Reports />} />
         <Route path="/delivery" element={<Deliveries />} />
-        <Route path="/admin" element={<Admin />} />
-        <Route path="/login" element={<Login />} />
+        {/* <Route path="/admin" element={<Admin />} />
+        <Route path="/login" element={<Login />} /> */}
       </Routes>
     </div>
   );

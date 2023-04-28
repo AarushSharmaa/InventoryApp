@@ -8,7 +8,7 @@ import Deliveries from "./Components/DeliveriesPage/Deliveries";
 import Links from "./Components/LinkPage/Links";
 import RoutesOfPage from "./Components/AdminPage/RoutesOfPage";
 import { useEffect, useState } from "react";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 
 function App() {
   const [userName, setUserName] = useState("");
@@ -21,13 +21,14 @@ function App() {
   }, [userDetails]);
   return (
     <div>
-      {/* <h4>Smart Inventory Management App</h4> */}
-      {/* <Login /> */}
-      <Admin />
+      <RoutesOfPage />
+      <Routes>
+        <Route path="/" element={<Login />} />
 
-      {/* <RoutesOfPage /> */}
-
-      {/* <Testing /> */}
+        <Route path="/admin" element={<Admin />} />
+      </Routes>
+      {/* <Login />
+       <Admin />  */}
     </div>
   );
 }

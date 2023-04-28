@@ -8,7 +8,7 @@ const Links = () => {
   const handleLogout = () => {
     console.log("logout button clicked");
     localStorage.removeItem("user");
-    navigate("/login");
+    navigate("/");
   };
   return (
     <>
