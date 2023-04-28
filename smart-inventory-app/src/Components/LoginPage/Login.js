@@ -37,10 +37,10 @@ export default function Login() {
       <div className="container">
         <div className="row justify-content-center">
           <div className="col-md-6">
-            <div className="card mt-5">
+            <div className="card mt-5 shadow-lg p-3 mb-5 bg-white rounded">
               <div className="card-body">
                 <h5
-                  className="fw-normal mb-3 pb-3"
+                  className="fw-normal mb-3 pb-3 text-center"
                   style={{ "letter-spacing": "1px" }}
                 >
                   Sign into your account
@@ -73,7 +73,7 @@ export default function Login() {
 
                   <button
                     type="submit"
-                    className="btn btn-dark btn-lg btn-block"
+                    className="btn btn-dark btn-lg btn-block mt-4"
                     onClick={submitHandler}
                   >
                     Sign In

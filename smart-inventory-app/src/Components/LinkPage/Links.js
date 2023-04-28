@@ -15,26 +15,26 @@ const Links = () => {
       <div className="card">
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
           <div className="container-fluid">
-            <NavLink to="/home" className="navbar-brand">
+            <NavLink to="/admin/home" className="navbar-brand">
               Home
             </NavLink>
-            <NavLink to="/godown" className="navbar-brand">
+            <NavLink to="/admin/godown" className="navbar-brand">
               Godown
             </NavLink>
-            <NavLink to="/employee" className="navbar-brand">
+            <NavLink to="/admin/employee" className="navbar-brand">
               Employee
             </NavLink>
-            <NavLink to="/inwards" className="navbar-brand">
+            <NavLink to="/admin/inwards" className="navbar-brand">
               Inwards
             </NavLink>
 
-            <NavLink to="/delivery" className="navbar-brand">
+            <NavLink to="/admin/delivery" className="navbar-brand">
               Delivery
             </NavLink>
-            <NavLink to="/return" className="navbar-brand">
+            <NavLink to="/admin/return" className="navbar-brand">
               Return
             </NavLink>
-            <NavLink to="/report" className="navbar-brand">
+            <NavLink to="/admin/report" className="navbar-brand">
               Report
             </NavLink>
 
