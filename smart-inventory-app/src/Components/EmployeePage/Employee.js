@@ -4,6 +4,7 @@ import { useEffect } from "react";
 import AddEmployee from "./AddEmployee";
 import UpdateEmployee from "./UpdateEmployee";
 import DisplayEmployee from "./DisplayEmployee";
+import DeleteEmployee from "./DeleteEmployee";
 
 const Employee = () => {
   return (
@@ -18,6 +19,9 @@ const Employee = () => {
             </div>
             <div className="col">
               <UpdateEmployee />
+            </div>
+            <div className="col">
+              <DeleteEmployee />
             </div>
           </div>
         </div>
