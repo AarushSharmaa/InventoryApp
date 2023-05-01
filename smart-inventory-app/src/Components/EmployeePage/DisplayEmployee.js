@@ -6,7 +6,7 @@ const DisplayEmployee = () => {
   // we will fetch data & update the items using setItems
   useEffect(() => {
     // fetch("http://localhost:3030/AuthorisedPersonnel")
-    fetch("http://10.25.240.61:6543/")
+    fetch("http://10.25.240.61:6543/employees")
       .then((response) => response.json())
       .then((result) => {
         console.log(result);

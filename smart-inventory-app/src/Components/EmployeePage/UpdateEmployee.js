@@ -14,7 +14,7 @@ const UpdateEmployee = () => {
   // sends a PUT request to the database
   const handleUpdateEmployee = async () => {
     try {
-      const response = await fetch("http://10.25.240.61:6543/update", {
+      const response = await fetch("http://10.25.240.61:6543/updateemp", {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
