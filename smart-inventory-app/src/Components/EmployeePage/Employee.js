@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "bootstrap/dist/css/bootstrap.css";
+import "bootstrap/dist/css/bootstrap.min.css";
 import { useEffect } from "react";
 import AddEmployee from "./AddEmployee";
 import UpdateEmployee from "./UpdateEmployee";
@@ -8,7 +8,7 @@ import DeleteEmployee from "./DeleteEmployee";
 
 const Employee = () => {
   return (
-    <>
+    <div className="container">
       <DisplayEmployee />
 
       <div className="row justify-content-center mt-5">
@@ -26,7 +26,7 @@ const Employee = () => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

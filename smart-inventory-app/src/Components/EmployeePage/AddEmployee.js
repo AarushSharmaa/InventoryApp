@@ -57,7 +57,7 @@ const AddEmployee = () => {
   return (
     <div>
       <button className="btn btn-secondary" onClick={() => setShowForm(true)}>
-        Add Employee
+        Add New Employee
       </button>
       {showForm && (
         <form className="mt-3 p-3 border rounded shadow-sm add-employee-form">

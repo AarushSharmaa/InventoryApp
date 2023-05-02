@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { useEffect } from "react";
+import AddProduct from "./AddProduct";
 
 const Godown = () => {
   const [items, setItems] = useState([]);
@@ -42,6 +43,7 @@ const Godown = () => {
           </tbody>
         </table>
       </div>
+      <AddProduct />
     </div>
   );
 };
