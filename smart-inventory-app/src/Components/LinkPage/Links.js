@@ -27,7 +27,6 @@ const Links = () => {
             <NavLink to="/admin/inwards" className="navbar-brand">
               Inwards
             </NavLink>
-
             <NavLink to="/admin/delivery" className="navbar-brand">
               Delivery
             </NavLink>
@@ -37,9 +36,7 @@ const Links = () => {
             <NavLink to="/admin/report" className="navbar-brand">
               Report
             </NavLink>
-
-            {/* logout button */}
-            <div className="ms-auto">
+            <div className="d-flex justify-content-end">
               <button onClick={handleLogout} className="btn btn-dark">
                 Logout
               </button>

@@ -8,6 +8,7 @@ import Login from "../LoginPage/Login";
 import Reports from "../ReportPage/Reports";
 import Admin from "./Admin";
 import Deliveries from "../DeliveriesPage/Deliveries";
+import Home from "../HomePage/Home";
 const RoutesOfPage = () => {
   return (
     <div>
@@ -18,6 +19,7 @@ const RoutesOfPage = () => {
         <Route path="/return" element={<Return />} />
         <Route path="/report" element={<Reports />} />
         <Route path="/delivery" element={<Deliveries />} />
+        <Route path="/home" element={<Home />} />
         {/* <Route path="/admin" element={<Admin />} />
         <Route path="/login" element={<Login />} /> */}
       </Routes>

@@ -23,7 +23,7 @@ export default function Login() {
             result[index].id === Number(password)
           ) {
             console.log(`${username} : you are authorised`);
-            navigate("/admin");
+            navigate("/admin/home");
           }
         }
       });
