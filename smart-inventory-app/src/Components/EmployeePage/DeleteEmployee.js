@@ -7,7 +7,7 @@ const DeleteEmployee = () => {
   const handleDeleteEmployee = async () => {
     try {
       const response = await fetch(
-        `http://10.25.240.61:6543/employee/${empId}`,
+        `http://10.25.240.61:6543/deleteemp/${parseInt(empId)}`,
         {
           method: "DELETE",
           headers: {
@@ -38,7 +38,7 @@ const DeleteEmployee = () => {
               Employee ID:
             </label>
             <input
-              type="text"
+              type="number"
               className="form-control"
               id="empId"
               value={empId}
