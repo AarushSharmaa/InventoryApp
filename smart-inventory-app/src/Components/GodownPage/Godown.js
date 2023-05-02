@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { useEffect } from "react";
 import AddProduct from "./AddProduct";
+import DeleteEmployee from "../EmployeePage/DeleteEmployee";
+import DeleteProduct from "./DeleteProduct";
 
 const Godown = () => {
   const [items, setItems] = useState([]);
@@ -26,6 +28,7 @@ const Godown = () => {
         <table className="table table-hover table-bordered">
           <thead className="table-dark">
             <tr>
+              <th scope="col">ID</th>
               <th scope="col">Item Name</th>
               <th scope="col">Description</th>
             </tr>
@@ -36,6 +39,7 @@ const Godown = () => {
               items.map(({ product_id, productName, productDiscription }) => (
                 <tr key={product_id}>
                   {/* {console.log(productName)} */}
+                  <td>{product_id}</td>
                   <td>{productName}</td>
                   <td>{productDiscription}</td>
                 </tr>
@@ -43,7 +47,19 @@ const Godown = () => {
           </tbody>
         </table>
       </div>
-      <AddProduct />
+
+      <div className="row justify-content-center mt-5">
+        <div className="col-lg-6">
+          <div className="row">
+            <div className="col">
+              <AddProduct />
+            </div>
+            <div className="col">
+              <DeleteProduct />
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
