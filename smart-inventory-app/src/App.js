@@ -8,7 +8,8 @@ import Deliveries from "./Components/DeliveriesPage/Deliveries";
 import Links from "./Components/LinkPage/Links";
 import RoutesOfPage from "./Components/AdminPage/RoutesOfPage";
 import { useEffect, useState } from "react";
-import { Routes, Route, Navigate } from "react-router-dom";
+import { ProtectedRoute, Routes, Route, Navigate } from "react-router-dom";
+import { AuthProvider } from "./AuthContext";
 
 function App() {
   const [userName, setUserName] = useState("");
@@ -22,14 +23,11 @@ function App() {
   return (
     <div>
       {/* <RoutesOfPage /> */}
+
       <Routes>
         <Route path="/" element={<Login />} />
-
         <Route path="/admin/*" element={<Admin />} />
       </Routes>
-
-      {/* <Login />
-       <Admin />  */}
     </div>
   );
 }

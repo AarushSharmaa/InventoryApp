@@ -8,6 +8,8 @@ import Links from "../LinkPage/Links";
 import RoutesOfPage from "./RoutesOfPage";
 import "bootstrap/dist/css/bootstrap.css";
 import { useEffect } from "react";
+import { useAuth } from "../../AuthContext";
+import { Navigate } from "react-router-dom";
 
 const Admin = () => {
   return (

@@ -7,6 +7,7 @@ const Links = () => {
   const navigate = useNavigate();
   const handleLogout = () => {
     console.log("logout button clicked");
+
     localStorage.removeItem("user");
     navigate("/");
   };

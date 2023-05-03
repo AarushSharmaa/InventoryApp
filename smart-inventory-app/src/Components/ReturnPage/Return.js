@@ -15,15 +15,16 @@ const Return = () => {
 
   return (
     <>
-      <div className="container mt-5">
-        <h1 className="text-center mb-5">Return Details</h1>
+      <div className="container mt-5 ">
+        <h1 className="text-center mb-5  ">Return Details</h1>
+
         <div className="table-responsive">
           <table className="table table-hover table-bordered">
             <thead className="table-dark">
               <tr>
                 <th scope="col">#</th>
                 <th scope="col">Item Name</th>
-                <th scope="col">Description</th>
+                <th scope="col">Reason of return</th>
               </tr>
             </thead>
             <tbody>

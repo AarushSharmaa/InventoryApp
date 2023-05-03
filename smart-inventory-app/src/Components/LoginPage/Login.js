@@ -3,10 +3,12 @@ import "bootstrap/dist/css/bootstrap.css";
 import { useNavigate } from "react-router-dom";
 import RoutesOfPage from "../AdminPage/RoutesOfPage";
 import "./Login.css";
+import { useAuth } from "../../AuthContext";
 
 export default function Login() {
   const [username, setUserName] = useState();
   const [password, setPassword] = useState();
+
   const navigate = useNavigate();
 
   const submitHandler = (e) => {
@@ -22,7 +24,6 @@ export default function Login() {
             result[index].name === username &&
             result[index].id === Number(password)
           ) {
-            console.log(`${username} : you are authorised`);
             navigate("/admin/home");
           }
         }
@@ -56,6 +57,7 @@ export default function Login() {
                       type="text"
                       className="form-control"
                       onChange={(e) => setUserName(e.target.value)}
+                      placeholder="enter your username"
                     />
                   </div>
 
@@ -68,6 +70,7 @@ export default function Login() {
                       type="password"
                       className="form-control"
                       onChange={(e) => setPassword(e.target.value)}
+                      placeholder="enter your password"
                     />
                   </div>
 

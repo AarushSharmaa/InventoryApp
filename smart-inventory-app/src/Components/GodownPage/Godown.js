@@ -4,6 +4,7 @@ import { useEffect } from "react";
 import AddProduct from "./AddProduct";
 import DeleteEmployee from "../EmployeePage/DeleteEmployee";
 import DeleteProduct from "./DeleteProduct";
+import UpdateProduct from "./UpdateProduct";
 
 const Godown = () => {
   const [items, setItems] = useState([]);
@@ -53,6 +54,10 @@ const Godown = () => {
           <div className="row">
             <div className="col">
               <AddProduct />
+            </div>
+
+            <div className="col">
+              <UpdateProduct />
             </div>
             <div className="col">
               <DeleteProduct />
