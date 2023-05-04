@@ -29,9 +29,10 @@ const Godown = () => {
         <table className="table table-hover table-bordered">
           <thead className="table-dark">
             <tr>
-              <th scope="col">ID</th>
+              <th scope="col">Item Id</th>
               <th scope="col">Item Name</th>
-              <th scope="col">Description</th>
+              <th scope="col">Item Description</th>
+              <th scope="col"></th>
             </tr>
           </thead>
 

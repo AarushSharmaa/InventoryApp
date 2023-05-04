@@ -3,27 +3,42 @@
     {
       "id": 1,
       "name": "Socks",
-      "quantity": 1
+      "quantity": 1,
+      "dateOfDelivery": "22nd April 2023",
+      "supplierName": "Alpha",
+      "courierService": "Bluedart"
     },
     {
       "id": 2,
       "name": "Pencil",
-      "quantity": 12
+      "quantity": 12,
+      "dateOfDelivery": "2nd May 2023",
+      "supplierName": "Beta",
+      "courierService": "Delhiivery"
     },
     {
       "id": 3,
       "name": "Water bottle",
-      "quantity": 2
+      "quantity": 2,
+      "dateOfDelivery": "9th May 2023",
+      "supplierName": "Gamma",
+      "courierService": "FedEx"
     },
     {
       "id": 4,
       "name": "Table",
-      "quantity": 4
+      "quantity": 4,
+      "dateOfDelivery": "12th June 2023",
+      "supplierName": "Theta",
+      "courierService": "DTDC"
     },
     {
       "id": 5,
       "name": "Laptop",
-      "quantity": 1
+      "quantity": 1,
+      "dateOfDelivery": "18th June 2023",
+      "supplierName": "Mona",
+      "courierService": "Ecom express"
     }
   ]
 }

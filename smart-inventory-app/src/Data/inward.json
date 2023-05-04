@@ -7,7 +7,11 @@
 
       "quantity": 10,
 
-      "dateOfReceiving": "22nd April 2023"
+      "dateOfReceiving": "22nd April 2023",
+
+      "supplierName": "Alpha",
+
+      "invoiceNumber": "134"
     },
 
     {
@@ -17,7 +21,11 @@
 
       "quantity": 9,
 
-      "dateOfReceiving": "3rd May 2023"
+      "dateOfReceiving": "3rd May 2023",
+
+      "supplierName": "Beta",
+
+      "invoiceNumber": "12"
     },
     {
       "id": 3,
@@ -26,7 +34,11 @@
 
       "quantity": 22,
 
-      "dateOfReceiving": "7th May 2023"
+      "dateOfReceiving": "7th May 2023",
+
+      "supplierName": "Gamma",
+
+      "invoiceNumber": "18"
     },
     {
       "id": 4,
@@ -35,7 +47,11 @@
 
       "quantity": 11,
 
-      "dateOfReceiving": "15th May 2023"
+      "dateOfReceiving": "15th May 2023",
+
+      "supplierName": "Theta",
+
+      "invoiceNumber": "92"
     }
   ]
 }

@@ -28,15 +28,15 @@ const Reports = () => {
                       </thead>
                       <tbody>
                         <tr>
-                          <td>Item 1</td>
+                          <td>Water Bottle</td>
                           <td>100</td>
                         </tr>
                         <tr>
-                          <td>Item 2</td>
+                          <td>Dining Table Set</td>
                           <td>50</td>
                         </tr>
                         <tr>
-                          <td>Item 3</td>
+                          <td>Laptop</td>
                           <td>200</td>
                         </tr>
                       </tbody>
@@ -49,29 +49,29 @@ const Reports = () => {
             <div className="col-md-6 mb-4">
               <div className="card">
                 <div className="card-header bg-secondary text-white">
-                  <h4 className="mb-0">Inwards Report</h4>
+                  <h4 className="mb-0">Transaction Report</h4>
                 </div>
                 <div className="card-body">
                   <div className="table-responsive animate__animated animate__fadeInUp">
                     <table className="table table-striped table-bordered">
                       <thead>
                         <tr>
-                          <th scope="col">Month</th>
-                          <th scope="col">Items received by godown</th>
+                          <th scope="col">Inwards</th>
+                          <th scope="col">Outwards</th>
                         </tr>
                       </thead>
                       <tbody>
                         <tr>
-                          <td>January</td>
-                          <td>1000</td>
+                          <td>1001</td>
+                          <td>998</td>
                         </tr>
                         <tr>
-                          <td>February</td>
-                          <td>1500</td>
+                          <td>1003</td>
+                          <td>879</td>
                         </tr>
                         <tr>
-                          <td>March</td>
-                          <td>2000</td>
+                          <td>193</td>
+                          <td>122</td>
                         </tr>
                       </tbody>
                     </table>

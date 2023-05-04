@@ -23,6 +23,9 @@ const Deliveries = () => {
             <th scope="col">Item Id</th>
             <th scope="col">Item Name</th>
             <th scope="col">Item Quantity</th>
+            <th scope="col">Date of delivery</th>
+            <th scope="col">Supplier Name</th>
+            <th scope="col">Courier Service</th>
           </tr>
         </thead>
         <tbody>
@@ -31,6 +34,9 @@ const Deliveries = () => {
               <td scope="row">{item.id}</td>
               <td>{item.name}</td>
               <td>{item.quantity}</td>
+              <td>{item.dateOfDelivery}</td>
+              <td>{item.supplierName}</td>
+              <td>{item.courierService}</td>
             </tr>
           ))}
         </tbody>

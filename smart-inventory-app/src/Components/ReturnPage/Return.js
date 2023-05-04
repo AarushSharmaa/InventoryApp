@@ -22,7 +22,7 @@ const Return = () => {
           <table className="table table-hover table-bordered">
             <thead className="table-dark">
               <tr>
-                <th scope="col">#</th>
+                <th scope="col">ID</th>
                 <th scope="col">Item Name</th>
                 <th scope="col">Reason of return</th>
               </tr>

@@ -24,6 +24,8 @@ const Inwards = () => {
             <th scope="col">Item Name</th>
             <th scope="col">Item Quantity</th>
             <th scope="col">Date of receiving</th>
+            <th scope="col">Supplier Name</th>
+            <th scope="col">Invoice Number</th>
           </tr>
         </thead>
         <tbody>
@@ -33,6 +35,8 @@ const Inwards = () => {
               <td>{item.name}</td>
               <td>{item.quantity}</td>
               <td>{item.dateOfReceiving}</td>
+              <td>{item.supplierName}</td>
+              <td>{item.invoiceNumber}</td>
             </tr>
           ))}
         </tbody>
