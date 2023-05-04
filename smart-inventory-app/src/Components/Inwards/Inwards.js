@@ -23,6 +23,7 @@ const Inwards = () => {
             <th scope="col">Item Id</th>
             <th scope="col">Item Name</th>
             <th scope="col">Item Quantity</th>
+            <th scope="col">Date of receiving</th>
           </tr>
         </thead>
         <tbody>
@@ -31,6 +32,7 @@ const Inwards = () => {
               <td scope="row">{item.id}</td>
               <td>{item.name}</td>
               <td>{item.quantity}</td>
+              <td>{item.dateOfReceiving}</td>
             </tr>
           ))}
         </tbody>

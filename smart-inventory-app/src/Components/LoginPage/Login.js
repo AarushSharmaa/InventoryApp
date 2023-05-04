@@ -3,36 +3,33 @@ import "bootstrap/dist/css/bootstrap.css";
 import { useNavigate } from "react-router-dom";
 import RoutesOfPage from "../AdminPage/RoutesOfPage";
 import "./Login.css";
-import { useAuth } from "../../AuthContext";
 
 export default function Login() {
   const [username, setUserName] = useState();
   const [password, setPassword] = useState();
-  const { isAuthenticated } = useAuth();
 
   const navigate = useNavigate();
 
   const submitHandler = (e) => {
+    e.preventDefault();
+
+    console.log("login button clicked");
     fetch("http://localhost:3030/AuthorisedPersonnel")
-      // {
-      //   method: "POST",
-      //   headers: {
-      //     "Content-Type": "application/json",
-      //   },
-      //   body: JSON.stringify({
-      //     username,
-      //     password,
-      //   }),
-      // })
       .then((response) => response.json())
       .then((result) => {
         localStorage.setItem("user", JSON.stringify({ username, password }));
 
         for (let index = 0; index < result.length; index++) {
+          console.log(
+            "Username and password : ",
+            result[index].name,
+            result[index].id
+          );
           if (
             result[index].name === username &&
             result[index].id === Number(password)
           ) {
+            console.log("you are authorised");
             navigate("/admin/home");
           }
         }

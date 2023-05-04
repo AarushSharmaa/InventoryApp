@@ -5,7 +5,9 @@
 
       "name": "Bottle",
 
-      "quantity": 10
+      "quantity": 10,
+
+      "dateOfReceiving": "22nd April 2023"
     },
 
     {
@@ -13,21 +15,27 @@
 
       "name": "Television",
 
-      "quantity": 9
+      "quantity": 9,
+
+      "dateOfReceiving": "3rd May 2023"
     },
     {
       "id": 3,
 
       "name": "Speaker",
 
-      "quantity": 22
+      "quantity": 22,
+
+      "dateOfReceiving": "7th May 2023"
     },
     {
       "id": 4,
 
       "name": "Sofa",
 
-      "quantity": 11
+      "quantity": 11,
+
+      "dateOfReceiving": "15th May 2023"
     }
   ]
 }

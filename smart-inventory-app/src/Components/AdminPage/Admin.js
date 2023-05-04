@@ -12,10 +12,6 @@ import { useAuth } from "../../AuthContext";
 
 const Admin = () => {
   const navigate = useNavigate();
-  const { isAuthenticated } = useAuth();
-  if (!isAuthenticated) {
-    return navigate("/");
-  }
   return (
     <>
       <div className="container-fluid">

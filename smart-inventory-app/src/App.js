@@ -20,15 +20,13 @@ function App() {
 
     console.log(userDetails);
   }, [userDetails]);
+
   return (
     <div>
-      {/* <RoutesOfPage /> */}
-      <AuthProvider>
-        <Routes>
-          <Route path="/" element={<Login />} />
-          <Route path="/admin/*" element={<Admin />} />
-        </Routes>
-      </AuthProvider>
+      <Routes>
+        <Route path="/" element={<Login />} />
+        <Route path="/admin/*" element={<Admin />} />
+      </Routes>
     </div>
   );
 }
