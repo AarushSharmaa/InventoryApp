@@ -28,7 +28,7 @@ const DeleteProduct = () => {
 
   return (
     <div>
-      <Modal size="lg" isOpen={modal} toggle={() => setModal(!modal)}>
+      <Modal isOpen={modal} toggle={() => setModal(!modal)}>
         <ModalHeader toggle={() => setModal(!modal)}>
           <form className="mt-3 p-3 border rounded shadow-sm add-employee-form">
             {/* Product ID*/}

@@ -23,11 +23,12 @@ function App() {
   return (
     <div>
       {/* <RoutesOfPage /> */}
-
-      <Routes>
-        <Route path="/" element={<Login />} />
-        <Route path="/admin/*" element={<Admin />} />
-      </Routes>
+      <AuthProvider>
+        <Routes>
+          <Route path="/" element={<Login />} />
+          <Route path="/admin/*" element={<Admin />} />
+        </Routes>
+      </AuthProvider>
     </div>
   );
 }

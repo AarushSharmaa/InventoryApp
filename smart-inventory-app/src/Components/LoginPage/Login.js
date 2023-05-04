@@ -8,13 +8,22 @@ import { useAuth } from "../../AuthContext";
 export default function Login() {
   const [username, setUserName] = useState();
   const [password, setPassword] = useState();
+  const { isAuthenticated } = useAuth();
 
   const navigate = useNavigate();
 
   const submitHandler = (e) => {
-    e.preventDefault();
-
     fetch("http://localhost:3030/AuthorisedPersonnel")
+      // {
+      //   method: "POST",
+      //   headers: {
+      //     "Content-Type": "application/json",
+      //   },
+      //   body: JSON.stringify({
+      //     username,
+      //     password,
+      //   }),
+      // })
       .then((response) => response.json())
       .then((result) => {
         localStorage.setItem("user", JSON.stringify({ username, password }));

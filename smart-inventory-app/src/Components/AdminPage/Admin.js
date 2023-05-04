@@ -3,15 +3,19 @@ import Godown from "../GodownPage/Godown";
 import Employee from "../EmployeePage/Employee";
 import Inwards from "../Inwards/Inwards";
 import Return from "../ReturnPage/Return";
-import { Routes, Route, NavLink } from "react-router-dom";
+import { Routes, Route, NavLink, useNavigate } from "react-router-dom";
 import Links from "../LinkPage/Links";
 import RoutesOfPage from "./RoutesOfPage";
 import "bootstrap/dist/css/bootstrap.css";
 import { useEffect } from "react";
 import { useAuth } from "../../AuthContext";
-import { Navigate } from "react-router-dom";
 
 const Admin = () => {
+  const navigate = useNavigate();
+  const { isAuthenticated } = useAuth();
+  if (!isAuthenticated) {
+    return navigate("/");
+  }
   return (
     <>
       <div className="container-fluid">
