@@ -13,7 +13,7 @@ const UpdateProduct = () => {
   const handleUpdateProduct = async () => {
     try {
       console.log(product_id);
-      const response = await fetch(`http://10.25.240.112:5432/updateProd`, {
+      const response = await fetch(`http://10.25.240.61:6543/updateProd`, {
         method: "PUT",
         headers: {
           "Content-type": "application/json",

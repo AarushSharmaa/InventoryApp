@@ -162,7 +162,7 @@ const AddProduct = () => {
   const handleAddProduct = async () => {
     console.log(productName);
     try {
-      const response = await fetch("http://10.25.240.112:5432/addProduct", {
+      const response = await fetch("http://10.25.240.61:6543/addProduct", {
         method: "POST",
 
         headers: {

@@ -22,8 +22,9 @@ const Return = () => {
           <table className="table table-hover table-bordered">
             <thead className="table-dark">
               <tr>
-                <th scope="col">ID</th>
+                <th scope="col">Item Id</th>
                 <th scope="col">Item Name</th>
+                <th scope="col">Quantity</th>
                 <th scope="col">Reason of return</th>
               </tr>
             </thead>
@@ -33,6 +34,7 @@ const Return = () => {
                   <tr key={item.itemId}>
                     <td>{item.itemId}</td>
                     <td>{item.itemName}</td>
+                    <td>{item.quantity}</td>
                     <td>{item.itemDescription}</td>
                   </tr>
                 ))}

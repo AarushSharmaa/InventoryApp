@@ -15,6 +15,16 @@ export default function Login() {
 
     console.log("login button clicked");
     fetch("http://localhost:3030/AuthorisedPersonnel")
+      // ,{
+      //   method: "POST",
+      //   headers: {
+      //     "Content-type": "application/json",
+      //   },
+      //   body: JSON.stringify({
+      //     username,
+      //     password,
+      //   }),
+      // })
       .then((response) => response.json())
       .then((result) => {
         localStorage.setItem("user", JSON.stringify({ username, password }));

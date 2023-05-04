@@ -32,7 +32,6 @@ const Godown = () => {
               <th scope="col">Item Id</th>
               <th scope="col">Item Name</th>
               <th scope="col">Item Description</th>
-              <th scope="col"></th>
             </tr>
           </thead>
 
