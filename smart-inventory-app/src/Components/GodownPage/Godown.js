@@ -10,7 +10,7 @@ const Godown = () => {
   const [items, setItems] = useState([]);
 
   useEffect(() => {
-    fetch("http://10.25.240.112:5432/products")
+    fetch("http://10.11.245.169:6543/products")
       .then((response) => response.json())
       .then((result) => {
         setItems(

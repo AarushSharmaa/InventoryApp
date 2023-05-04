@@ -8,7 +8,7 @@ const DeleteProduct = () => {
   const handleDeleteProduct = async () => {
     try {
       const response = await fetch(
-        `http://10.25.240.61:6543/deleteProd/${parseInt(product_id)}`,
+        `http://10.11.245.169:6543/deleteProd/${parseInt(product_id)}`,
         {
           method: "DELETE",
           headers: {

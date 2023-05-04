@@ -57,7 +57,7 @@ const Reports = () => {
                       <thead>
                         <tr>
                           <th scope="col">Inwards</th>
-                          <th scope="col">Outwards</th>
+                          <th scope="col">Deliveries</th>
                         </tr>
                       </thead>
                       <tbody>

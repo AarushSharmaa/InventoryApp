@@ -24,7 +24,7 @@ const Return = () => {
               <tr>
                 <th scope="col">Item Id</th>
                 <th scope="col">Item Name</th>
-                <th scope="col">Quantity</th>
+                <th scope="col">Item Quantity</th>
                 <th scope="col">Reason of return</th>
               </tr>
             </thead>

@@ -18,7 +18,7 @@ const AddEmployee = () => {
   const handleAddEmployee = async () => {
     try {
       // console.log(firstName, lastName, con, email);
-      const response = await fetch("http://10.25.240.61:6543/addEmployee", {
+      const response = await fetch("http://10.11.245.169:6543/addEmployee", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

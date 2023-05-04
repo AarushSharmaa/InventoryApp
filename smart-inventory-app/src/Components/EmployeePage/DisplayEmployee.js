@@ -6,7 +6,7 @@ const DisplayEmployee = () => {
   // we will fetch data & update the items using setItems
   useEffect(() => {
     // fetch("http://localhost:3030/AuthorisedPersonnel")
-    fetch("http://10.25.240.61:6543/employees")
+    fetch("http://10.11.245.169:6543/employees")
       .then((response) => response.json())
       .then((result) => {
         console.log(result);
@@ -29,7 +29,7 @@ const DisplayEmployee = () => {
               <thead className="table-dark">
                 <tr>
                   <th scope="col">Username</th>
-                  <th scope="col">ID</th>
+                  <th scope="col">Employee Id</th>
                 </tr>
               </thead>
 
