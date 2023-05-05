@@ -125,7 +125,7 @@ const UpdateReturn = () => {
         </ModalHeader>
       </Modal>
       <button className="btn btn-secondary" onClick={() => setModal(!modal)}>
-        Add New Return
+        Update Return
       </button>
     </div>
   );

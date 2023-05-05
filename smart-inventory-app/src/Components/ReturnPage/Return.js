@@ -8,7 +8,7 @@ const Return = () => {
   const [items, setItems] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:3010/Return")
+    fetch("http://10.11.245.169:6543/returns")
       .then((response) => response.json())
       .then((result) => {
         setItems(result.map((exp) => ({ ...exp })));
@@ -34,11 +34,11 @@ const Return = () => {
             <tbody>
               {items &&
                 items.map((item) => (
-                  <tr key={item.itemId}>
-                    <td>{item.itemId}</td>
-                    <td>{item.itemName}</td>
-                    <td>{item.quantity}</td>
-                    <td>{item.itemDescription}</td>
+                  <tr key={item.item_id}>
+                    <td>{item.item_id}</td>
+                    <td>{item.item_name}</td>
+                    <td>{item.item_quantity}</td>
+                    <td>{item.reason_for_return}</td>
                   </tr>
                 ))}
             </tbody>
