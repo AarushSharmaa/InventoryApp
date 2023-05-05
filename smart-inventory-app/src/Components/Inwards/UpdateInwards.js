@@ -11,8 +11,12 @@ const UpdateInwards = () => {
   const [supplierId, setSupplierId] = useState("");
 
   const handleUpdateProduct = async () => {
+    if (!product_id) {
+      alert("Please enter product id");
+      return;
+    }
     try {
-      const response = await fetch("http://10.11.245.169:6543/addProduct", {
+      const response = await fetch("http://10.11.245.169:6543/updateProd", {
         method: "PUT",
 
         headers: {

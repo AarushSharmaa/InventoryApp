@@ -11,7 +11,16 @@ const AddInwards = () => {
   const [supplierId, setSupplierId] = useState("");
 
   const handleAddProduct = async () => {
-    console.log(productName);
+    if (
+      !productName ||
+      !productDiscription ||
+      !date ||
+      !productQuantity ||
+      !supplierId
+    ) {
+      alert("Please enter all fields");
+      return;
+    }
     try {
       const response = await fetch("http://10.11.245.169:6543/addProduct", {
         method: "POST",

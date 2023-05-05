@@ -8,7 +8,7 @@ const Inwards = () => {
   const [items, setItems] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:3034/Inwards")
+    fetch("http://10.11.245.169:6543/products")
       .then((response) => response.json())
       .then((result) => {
         console.log(result);

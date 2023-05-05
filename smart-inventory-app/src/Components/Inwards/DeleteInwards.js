@@ -7,9 +7,13 @@ const DeleteInwards = () => {
   const [product_id, setProductId] = useState("");
 
   const handleDeleteInwards = async () => {
+    if (!product_id) {
+      alert("Please enter product id");
+      return;
+    }
     try {
       const response = await fetch(
-        `http://10.11.245.169:6543/deleteemp/${parseInt(product_id)}`,
+        `http://10.11.245.169:6543/deleteProd/${parseInt(product_id)}`,
         {
           method: "DELETE",
           headers: {
