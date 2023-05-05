@@ -6,6 +6,10 @@ const DeleteProduct = () => {
   const [product_id, setProductId] = useState("");
 
   const handleDeleteProduct = async () => {
+    if (!product_id) {
+      alert("Please fill in product id");
+      return;
+    }
     try {
       const response = await fetch(
         `http://10.11.245.169:6543/deleteProd/${parseInt(product_id)}`,

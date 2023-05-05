@@ -11,6 +11,10 @@ const UpdateProduct = () => {
   const [supplierId, setSupplierId] = useState("");
 
   const handleUpdateProduct = async () => {
+    if (!product_id) {
+      alert("Please fill in product id");
+      return;
+    }
     try {
       // console.log(product_id);
       const response = await fetch(`http://10.11.245.169:6543/updateProd`, {
