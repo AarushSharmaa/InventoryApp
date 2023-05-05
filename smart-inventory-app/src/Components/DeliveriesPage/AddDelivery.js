@@ -13,6 +13,10 @@ const AddDelivery = () => {
 
   // sends a POST request to the database
   const handleAddDelivery = async () => {
+    if (!orderid || !billNo || !quantity || !itemName || !date) {
+      alert("please enter all fields");
+      return;
+    }
     try {
       // console.log(firstName, lastName, con, email);
       const response = await fetch("http://10.25.240.112:5432/addOrder", {

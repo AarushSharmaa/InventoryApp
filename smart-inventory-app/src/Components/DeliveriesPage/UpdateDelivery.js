@@ -16,6 +16,10 @@ const UpdateDelivery = () => {
   const handleUpdateDelivery = async () => {
     console.log(orderid, itemName);
     try {
+      if (!orderid) {
+        alert("please fill order id");
+        return;
+      }
       // console.log(firstName, lastName, con, email);
       const response = await fetch("http://10.11.245.169:6543/updateOrder", {
         method: "PUT",

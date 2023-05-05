@@ -9,6 +9,10 @@ const DeleteDelivery = () => {
 
   // sends a POST request to the database
   const handleDeleteDelivery = async () => {
+    if (!orderid) {
+      alert("please fill order id");
+      return;
+    }
     try {
       // console.log(firstName, lastName, con, email);
       const response = await fetch(
