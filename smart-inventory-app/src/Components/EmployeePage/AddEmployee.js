@@ -16,8 +16,21 @@ const AddEmployee = () => {
 
   // sends a POST request to the database
   const handleAddEmployee = async () => {
+    // Check if any field is empty
+    if (
+      !firstName ||
+      !lastName ||
+      !phoneNo ||
+      !address ||
+      !emailId ||
+      !username ||
+      !password
+    ) {
+      alert("Please fill in all the fields");
+      return;
+    }
+
     try {
-      // console.log(firstName, lastName, con, email);
       const response = await fetch("http://10.11.245.169:6543/addEmployee", {
         method: "POST",
         headers: {
@@ -38,7 +51,6 @@ const AddEmployee = () => {
     } catch (error) {
       console.error(error);
     }
-    // setShowForm(false);
     setModal(!modal);
     setEmployeeId("");
     setFirstName("");
