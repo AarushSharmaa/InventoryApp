@@ -12,6 +12,10 @@ const UpdateReturn = () => {
 
   // sends a PUT to the database
   const handleUpdateReturn = async () => {
+    if (!item_id) {
+      alert("please proive item id");
+      return;
+    }
     try {
       // console.log(firstName, lastName, con, email);
       const response = await fetch("http://10.11.245.169:6543/addReturn", {

@@ -9,6 +9,10 @@ const DeleteReturn = () => {
 
   // sends a DELETE request to the database
   const handleDeleteReturn = async () => {
+    if (!item_id) {
+      alert("please enter item id");
+      return;
+    }
     try {
       // console.log(firstName, lastName, con, email);
       const response = await fetch(

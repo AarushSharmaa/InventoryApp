@@ -12,6 +12,10 @@ const AddReturn = () => {
 
   // sends a POST request to the database
   const handleAddReturn = async () => {
+    if (!item_id || !item_name || !item_quantity || !reason_for_return) {
+      alert("please enter all fields");
+      return;
+    }
     try {
       // console.log(firstName, lastName, con, email);
       const response = await fetch("http://10.11.245.169:6543/addReturn", {
