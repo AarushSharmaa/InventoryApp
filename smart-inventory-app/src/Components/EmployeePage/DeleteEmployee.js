@@ -7,6 +7,10 @@ const DeleteEmployee = () => {
   const [empId, setEmpId] = useState("");
 
   const handleDeleteEmployee = async () => {
+    if (!empId) {
+      alert("Please fill employee id");
+      return;
+    }
     try {
       const response = await fetch(
         `http://10.11.245.169:6543/deleteemp/${parseInt(empId)}`,
