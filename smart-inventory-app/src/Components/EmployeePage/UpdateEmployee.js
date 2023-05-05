@@ -15,6 +15,10 @@ const UpdateEmployee = () => {
 
   // sends a PUT request to the database
   const handleUpdateEmployee = async () => {
+    if (!empId) {
+      alert("Please fill in employee id");
+      return;
+    }
     try {
       const response = await fetch("http://10.11.245.169:6543/updateemp", {
         method: "PUT",
