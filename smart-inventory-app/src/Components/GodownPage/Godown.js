@@ -32,19 +32,28 @@ const Godown = () => {
               <th scope="col">Item Id</th>
               <th scope="col">Item Name</th>
               <th scope="col">Item Description</th>
+              <th scope="col">Supplier Id</th>
             </tr>
           </thead>
 
           <tbody>
             {items &&
-              items.map(({ product_id, productName, productDiscription }) => (
-                <tr key={product_id}>
-                  {/* {console.log(productName)} */}
-                  <td>{product_id}</td>
-                  <td>{productName}</td>
-                  <td>{productDiscription}</td>
-                </tr>
-              ))}
+              items.map(
+                ({
+                  product_id,
+                  productName,
+                  productDiscription,
+                  supplierId,
+                }) => (
+                  <tr key={product_id}>
+                    {/* {console.log(productName)} */}
+                    <td>{product_id}</td>
+                    <td>{productName}</td>
+                    <td>{productDiscription}</td>
+                    <td>{supplierId}</td>
+                  </tr>
+                )
+              )}
           </tbody>
         </table>
       </div>

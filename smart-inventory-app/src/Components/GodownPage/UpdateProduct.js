@@ -12,7 +12,7 @@ const UpdateProduct = () => {
 
   const handleUpdateProduct = async () => {
     try {
-      console.log(product_id);
+      // console.log(product_id);
       const response = await fetch(`http://10.11.245.169:6543/updateProd`, {
         method: "PUT",
         headers: {
@@ -53,7 +53,7 @@ const UpdateProduct = () => {
                 Product ID:
               </label>
               <input
-                type="text"
+                type="number"
                 className="form-control"
                 id="product_id"
                 value={product_id}
@@ -98,7 +98,7 @@ const UpdateProduct = () => {
                 Product Price:
               </label>
               <input
-                type="text"
+                type="number"
                 className="form-control"
                 id="productPrice"
                 value={productPrice}

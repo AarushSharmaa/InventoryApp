@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
+import AddInwards from "./AddInwards";
+import UpdateInwards from "./UpdateInwards";
+import DeleteInwards from "./DeleteInwards";
 
 const Inwards = () => {
   const [items, setItems] = useState([]);
@@ -24,8 +27,7 @@ const Inwards = () => {
             <th scope="col">Item Name</th>
             <th scope="col">Item Quantity</th>
             <th scope="col">Date of receiving</th>
-            <th scope="col">Supplier Name</th>
-            <th scope="col">Invoice Number</th>
+            <th scope="col">Supplier ID</th>
           </tr>
         </thead>
         <tbody>
@@ -36,11 +38,27 @@ const Inwards = () => {
               <td>{item.quantity}</td>
               <td>{item.dateOfReceiving}</td>
               <td>{item.supplierName}</td>
-              <td>{item.invoiceNumber}</td>
             </tr>
           ))}
         </tbody>
       </table>
+
+      <div className="row justify-content-center mt-5">
+        <div className="col-lg-6">
+          <div className="row">
+            <div className="col">
+              <AddInwards />
+            </div>
+
+            <div className="col">
+              <UpdateInwards />
+            </div>
+            <div className="col">
+              <DeleteInwards />
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };

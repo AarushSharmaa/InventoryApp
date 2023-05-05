@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import { Modal, ModalHeader } from "reactstrap";
 
-const AddProduct = () => {
+const AddInwards = () => {
   const [modal, setmodal] = useState(false);
   // const [showForm, setShowForm] = useState(false);
   const [productName, setProductName] = useState("");
   const [productDiscription, setProductDescription] = useState("");
-  const [productPrice, setProductPrice] = useState("");
+  const [date, setDate] = useState("");
   const [productQuantity, setProductQuantity] = useState("");
   const [supplierId, setSupplierId] = useState("");
 
@@ -23,7 +23,7 @@ const AddProduct = () => {
         body: JSON.stringify({
           productName,
           productDiscription,
-          productPrice,
+          date,
           productQuantity,
           supplierId,
         }),
@@ -39,7 +39,7 @@ const AddProduct = () => {
     setmodal(!modal);
     setProductName("");
     setProductDescription("");
-    setProductPrice("");
+    setDate("");
     setProductQuantity("");
     setSupplierId("");
   };
@@ -77,20 +77,7 @@ const AddProduct = () => {
                 required
               />
             </div>
-            {/* product_price */}
-            <div className="mb-3">
-              <label htmlFor="productPrice" className="form-label">
-                Product Price:
-              </label>
-              <input
-                type="text"
-                className="form-control"
-                id="productPrice"
-                value={productPrice}
-                onChange={(event) => setProductPrice(event.target.value)}
-                required
-              />
-            </div>
+
             {/* product_quantity */}
             <div className="mb-3">
               <label htmlFor="productQuantity" className="form-label">
@@ -105,6 +92,21 @@ const AddProduct = () => {
                 required
               />
             </div>
+            {/* date of receiving */}
+            <div className="mb-3">
+              <label htmlFor="date" className="form-label">
+                Date of receiving:
+              </label>
+              <input
+                type="text"
+                className="form-control"
+                id="date"
+                value={date}
+                onChange={(event) => setDate(event.target.value)}
+                required
+              />
+            </div>
+
             {/* supplier_id */}
             <div className="mb-3">
               <label htmlFor="supplierId" className="form-label">
@@ -133,17 +135,17 @@ const AddProduct = () => {
                 className="btn btn-primary"
                 onClick={handleAddProduct}
               >
-                Add Product
+                Add
               </button>
             </div>
           </form>
         </ModalHeader>
       </Modal>
       <button className="btn btn-secondary" onClick={() => setmodal(true)}>
-        Add New Product
+        Add New Inwards
       </button>
     </div>
   );
 };
 
-export default AddProduct;
+export default AddInwards;
