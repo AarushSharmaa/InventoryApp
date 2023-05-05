@@ -11,7 +11,16 @@ const AddProduct = () => {
   const [supplierId, setSupplierId] = useState("");
 
   const handleAddProduct = async () => {
-    console.log(productName);
+    if (
+      !productName ||
+      !productDiscription ||
+      !productPrice ||
+      !productQuantity ||
+      !supplierId
+    ) {
+      alert("Please fill in all the fields");
+      return;
+    }
     try {
       const response = await fetch("http://10.11.245.169:6543/addProduct", {
         method: "POST",
