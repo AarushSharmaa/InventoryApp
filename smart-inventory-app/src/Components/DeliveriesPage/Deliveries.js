@@ -41,7 +41,7 @@ const Deliveries = () => {
                 <td scope="row">{item.orderid}</td>
                 <td>{item.itemName}</td>
                 <td>{item.quantity}</td>
-                <td>{item.Date}</td>
+                <td>{item.date}</td>
                 <td>{item.billNo}</td>
               </tr>
             ))}

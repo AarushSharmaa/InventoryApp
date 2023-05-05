@@ -5,24 +5,28 @@ const UpdateDelivery = () => {
   // const [showForm, setShowForm] = useState(false);
   const [modal, setModal] = useState(false);
 
-  const [order_id, setOrderId] = useState("");
-  const [itemName, setItemName] = useState("");
+  const [orderid, setOrderId] = useState("");
+  const [customerId, setCustomerId] = useState("");
+  const [billNo, setBillNumber] = useState("");
   const [quantity, setQuantity] = useState("");
+  const [itemName, setItemName] = useState("");
   const [date, setDate] = useState("");
-  const [bill_no, setBillNumber] = useState("");
 
-  // sends a POST request to the database
+  // sends a PUT request to the database
   const handleUpdateDelivery = async () => {
+    console.log(orderid, itemName);
     try {
       // console.log(firstName, lastName, con, email);
-      const response = await fetch("http://10.11.245.169:6543/addEmployee", {
+      const response = await fetch("http://10.11.245.169:6543/updateOrder", {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
+          orderid: parseInt(orderid),
+          itemName,
           date,
-          bill_no,
+          billNo,
           quantity,
         }),
       });
@@ -33,10 +37,12 @@ const UpdateDelivery = () => {
     }
     // setShowForm(false);
     setModal(!modal);
+    setOrderId("");
+    setCustomerId("");
+    setItemName("");
     setDate("");
     setBillNumber("");
     setQuantity("");
-    setOrderId("");
   };
 
   return (
@@ -46,15 +52,30 @@ const UpdateDelivery = () => {
           <form className="mt-3 p-3 border rounded shadow-sm add-employee-form">
             {/* order_id */}
             <div className="mb-3">
-              <label htmlFor="address" className="form-label">
+              <label htmlFor="orderid" className="form-label">
                 Order Id:
               </label>
               <input
                 type="number"
                 className="form-control"
-                id="order_id"
-                value={order_id}
+                id="orderid"
+                value={orderid}
                 onChange={(event) => setOrderId(event.target.value)}
+                required
+              />
+            </div>
+
+            {/* customerId */}
+            <div className="mb-3">
+              <label htmlFor="customerId" className="form-label">
+                Customer Id:
+              </label>
+              <input
+                type="number"
+                className="form-control"
+                id="customerId"
+                value={customerId}
+                onChange={(event) => setCustomerId(event.target.value)}
                 required
               />
             </div>
@@ -65,7 +86,7 @@ const UpdateDelivery = () => {
                 Item Name:
               </label>
               <input
-                type="number"
+                type="text"
                 className="form-control"
                 id="itemName"
                 value={itemName}
@@ -95,7 +116,7 @@ const UpdateDelivery = () => {
                 Date of Delivery:
               </label>
               <input
-                type="number"
+                type="text"
                 className="form-control"
                 id="date"
                 value={date}
@@ -106,14 +127,14 @@ const UpdateDelivery = () => {
 
             {/* Bill Number */}
             <div className="mb-3">
-              <label htmlFor="bill_no" className="form-label">
+              <label htmlFor="billNo" className="form-label">
                 Bill Number:
               </label>
               <input
                 type="number"
                 className="form-control"
-                id="bill_no"
-                value={bill_no}
+                id="billNo"
+                value={billNo}
                 onChange={(event) => setBillNumber(event.target.value)}
                 required
               />
@@ -131,7 +152,7 @@ const UpdateDelivery = () => {
               <button
                 type="button"
                 className="btn btn-primary"
-                onClick={UpdateDelivery}
+                onClick={handleUpdateDelivery}
               >
                 Update
               </button>

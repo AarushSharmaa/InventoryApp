@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from "react";
 import "bootstrap/dist/css/bootstrap.css";
+import AddReturn from "./AddReturn";
+import UpdateReturn from "./UpdateReturn";
+import DeleteReturn from "./DeleteReturn";
 
 const Return = () => {
   const [items, setItems] = useState([]);
@@ -40,6 +43,23 @@ const Return = () => {
                 ))}
             </tbody>
           </table>
+        </div>
+
+        <div className="row justify-content-center mt-5">
+          <div className="col-lg-6">
+            <div className="row">
+              <div className="col">
+                <AddReturn />
+              </div>
+
+              <div className="col">
+                <UpdateReturn />
+              </div>
+              <div className="col">
+                <DeleteReturn />
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </>

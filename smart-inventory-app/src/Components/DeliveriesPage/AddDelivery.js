@@ -6,10 +6,10 @@ const AddDelivery = () => {
   const [modal, setModal] = useState(false);
 
   const [orderid, setOrderId] = useState("");
-  const [itemName, setItemName] = useState("");
-  const [quantity, setQuantity] = useState("");
-  const [date, setDate] = useState("");
   const [billNo, setBillNumber] = useState("");
+  const [quantity, setQuantity] = useState("");
+  const [itemName, setItemName] = useState("");
+  const [date, setDate] = useState("");
 
   // sends a POST request to the database
   const handleAddDelivery = async () => {
@@ -21,7 +21,7 @@ const AddDelivery = () => {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          orderid,
+          orderid: parseInt(orderid),
           itemName,
           quantity,
           date,
@@ -98,7 +98,7 @@ const AddDelivery = () => {
                 Date of Delivery:
               </label>
               <input
-                type="date"
+                type="text"
                 className="form-control"
                 id="date"
                 value={date}
