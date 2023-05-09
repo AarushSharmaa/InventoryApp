@@ -3,6 +3,7 @@ import "bootstrap/dist/css/bootstrap.css";
 import { useNavigate } from "react-router-dom";
 import RoutesOfPage from "../AdminPage/RoutesOfPage";
 import "./Login.css";
+import ChangePassword from "../ChangePassword/ChangePassword";
 
 export default function Login() {
   const [username, setUserName] = useState();
@@ -12,26 +13,15 @@ export default function Login() {
 
   const submitHandler = (e) => {
     e.preventDefault();
-
     console.log("login button clicked");
     fetch("http://localhost:3030/AuthorisedPersonnel")
-      // ,{
-      //   method: "POST",
-      //   headers: {
-      //     "Content-type": "application/json",
-      //   },
-      //   body: JSON.stringify({
-      //     username,
-      //     password,
-      //   }),
-      // })
       .then((response) => response.json())
       .then((result) => {
         localStorage.setItem("user", JSON.stringify({ username, password }));
 
         for (let index = 0; index < result.length; index++) {
           console.log(
-            "Username and password : ",
+            "Username and password: ",
             result[index].name,
             result[index].id
           );
@@ -58,7 +48,7 @@ export default function Login() {
               <div className="card-body">
                 <h5
                   className="fw-normal mb-3 pb-3 text-center"
-                  style={{ "letter-spacing": "1px" }}
+                  style={{ letterSpacing: "1px" }}
                 >
                   Sign into your account
                 </h5>
@@ -90,13 +80,15 @@ export default function Login() {
                     />
                   </div>
 
-                  <button
-                    type="submit"
-                    className="btn btn-dark btn-lg btn-block mt-4"
-                    onClick={submitHandler}
-                  >
-                    Sign In
-                  </button>
+                  <div className="d-flex justify-content-between align-items-center mb-4">
+                    <button
+                      type="submit"
+                      className="btn btn-dark btn-lg"
+                      onClick={submitHandler}
+                    >
+                      Log In
+                    </button>
+                  </div>
                 </form>
               </div>
             </div>

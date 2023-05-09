@@ -10,6 +10,7 @@ import RoutesOfPage from "./Components/AdminPage/RoutesOfPage";
 import { useEffect, useState } from "react";
 import { ProtectedRoute, Routes, Route, Navigate } from "react-router-dom";
 import { AuthProvider } from "./AuthContext";
+import ChangePassword from "./Components/ChangePassword/ChangePassword";
 
 function App() {
   const [userName, setUserName] = useState("");
