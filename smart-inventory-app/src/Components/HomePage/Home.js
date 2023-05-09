@@ -1,10 +1,23 @@
 import "bootstrap/dist/css/bootstrap.css";
+import { useSpring, animated } from "react-spring";
 
 const Home = () => {
+  const fadeAnimation = useSpring({
+    from: { opacity: 0 },
+    to: { opacity: 1 },
+    config: { duration: 1000 },
+  });
+
+  const slideAnimation = useSpring({
+    from: { transform: "translateX(-100px)" },
+    to: { transform: "translateX(0)" },
+    config: { duration: 1000 },
+  });
+
   return (
-    <div className="container">
-      <h1 className="text-center my-5">Welcome Employee </h1>
-      <div className="card border-primary mb-3">
+    <animated.div className="container" style={fadeAnimation}>
+      <h1 className="text-center my-5">Welcome Employee</h1>
+      <animated.div className="card border-primary mb-3" style={slideAnimation}>
         <div className="card-header">Inventory Management</div>
         <div className="card-body">
           <h4 className="card-title">Smart Inventory Management App</h4>
@@ -14,8 +27,8 @@ const Home = () => {
             with ease.
           </p>
         </div>
-      </div>
-    </div>
+      </animated.div>
+    </animated.div>
   );
 };
 
