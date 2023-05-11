@@ -51,6 +51,7 @@ const ChangePassword = () => {
     <Container className="text-center mt-5">
       {showForm ? (
         <Form onSubmit={handleChangePassword}>
+          {/* current password */}
           <FormGroup>
             <Label htmlFor="currentPassword">Current Password:</Label>
             <Input
@@ -60,6 +61,8 @@ const ChangePassword = () => {
               onChange={(e) => setCurrentPassword(e.target.value)}
             />
           </FormGroup>
+
+          {/* new password */}
           <FormGroup>
             <Label htmlFor="newPassword">New Password:</Label>
             <Input
@@ -69,6 +72,8 @@ const ChangePassword = () => {
               onChange={(e) => setNewPassword(e.target.value)}
             />
           </FormGroup>
+
+          {/* confirm new password */}
           <FormGroup>
             <Label htmlFor="confirmPassword">Confirm Password:</Label>
             <Input
@@ -78,6 +83,9 @@ const ChangePassword = () => {
               onChange={(e) => setConfirmPassword(e.target.value)}
             />
           </FormGroup>
+          <Button color="primary" onClick={() => setShowForm(!showForm)}>
+            Cancel
+          </Button>
           <Button color="primary" onClick={handleChangePassword}>
             Change Password
           </Button>
@@ -85,7 +93,8 @@ const ChangePassword = () => {
           {successMessage && <p>{successMessage}</p>}
         </Form>
       ) : (
-        <Button color="primary" onClick={() => setShowForm(true)}>
+        // Change password button
+        <Button color="primary" onClick={() => setShowForm(!showForm)}>
           Change Password
         </Button>
       )}

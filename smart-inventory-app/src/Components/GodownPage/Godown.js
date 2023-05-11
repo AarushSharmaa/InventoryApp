@@ -1,6 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { useEffect } from "react";
 import AddProduct from "./AddProduct";
 import DeleteEmployee from "../EmployeePage/DeleteEmployee";
 import DeleteProduct from "./DeleteProduct";
@@ -23,10 +22,10 @@ const Godown = () => {
   }, []);
 
   return (
-    <div className="container mt-5">
-      <h1 className="text-center mb-5">Godown Details</h1>
+    <div className="container mt-5 godown-container">
+      <h1 className="text-center mb-5 godown-title">Godown Details</h1>
       <div className="table-responsive">
-        <table className="table table-hover table-bordered">
+        <table className="table table-hover table-bordered table-striped">
           <thead className="table-dark">
             <tr>
               <th scope="col">Item Id</th>
@@ -46,7 +45,6 @@ const Godown = () => {
                   supplierId,
                 }) => (
                   <tr key={product_id}>
-                    {/* {console.log(productName)} */}
                     <td>{product_id}</td>
                     <td>{productName}</td>
                     <td>{productDiscription}</td>

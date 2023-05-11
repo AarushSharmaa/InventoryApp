@@ -28,6 +28,8 @@ function App() {
         <Route path="/" element={<Login />} />
         <Route path="/admin/*" element={<Admin />} />
       </Routes>
+
+      {/* <ChangePassword /> */}
     </div>
   );
 }
